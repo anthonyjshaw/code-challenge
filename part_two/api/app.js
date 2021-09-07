@@ -20,5 +20,6 @@ app.get('/test', (_, res) => res.status(200).send('Hello world'));
 
 // Routes
 app.use('/api/users', require('./routes/users'));
+app.use('/api/user_forms', require('./routes/userForms'));
 
 module.exports = app;

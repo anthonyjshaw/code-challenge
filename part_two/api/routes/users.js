@@ -14,7 +14,7 @@ router.post('/new_user', async (req, res) => {
   }
 });
 
-router.get('/all', async (req, res) => {
+router.get('/all', async (_, res) => {
   try {
     const allUsers = await retrieveAllUsers();
     return res.status(200).send(allUsers);

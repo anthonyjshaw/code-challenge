@@ -1,6 +1,14 @@
+// Breakdown: 
+// 1. take source obj
+// 2. create new empty obj designed for copying
+// 3. Check if the values of the source keys are objects (for nested objects)   
+
 const deepCopy = (sourceObj) => {
-  // 
-  return sourceObj;
+  const targetObj = {};
+  const sourceKeys = Object.keys(sourceObj);
+  sourceKeys.forEach(key => {
+
+  })
 };
 
 // Example simple test case
@@ -33,3 +41,20 @@ console.log('target ===>', target1);
 console.groupEnd();
 
 // Feel free to show off different style test cases as you see fit
+const source2 = {
+  a: {
+    b: {
+      c: {
+        value_1: 1,
+        value2: 2
+      }
+    }
+  }
+};
+
+const target2 = deepCopy(source2);
+console.group('Set3');
+console.log('source ==>', source2);
+console.log('target ==>', target2);
+console.log(source2.a.b.c);
+console.groupEnd();
