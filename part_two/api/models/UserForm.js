@@ -9,19 +9,13 @@ const UserFormSchema = new Schema(
         required: true,
         minlength: 1,
       },
-      questions: {
-        type: Array,
-        required: true,
-        maxlength: 20,
-      },
+      questions: [{
+      }],
       number_of_questions: {
         type: Number,
         required: true,
-      },
-      number_of_responses: {
-          type: Number,
-          required: true,
       }
+
     },
     {
       timestamps: {

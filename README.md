@@ -81,7 +81,7 @@ Your challenge is to design the database schema, endpoints and any associated lo
 Some things to consider:
 
 - We do not require you to have any authentication or logging of the user who created the form. Whilst this would be the obvious thing to do in the real world, in the scope of this challenge it is unnecessary
-- Think carefully about the data is stored. Scalability is important.
+- Think carefully about how the data is stored. Scalability is important.
 - Reusable and maintainable code is vital
 - What are some natural limits we would want to impose on any form created?
 - What are additional featues/ideas somebody creating a form may want to have access to?
