@@ -1,5 +1,6 @@
 const deepCopy = (sourceObj) => {
-  // your code here
+  // 
+  return sourceObj;
 };
 
 // Example simple test case
