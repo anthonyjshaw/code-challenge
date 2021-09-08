@@ -7,15 +7,20 @@ const UserFormSchema = new Schema(
       form_name: {
         type: String,
         required: true,
-        minlength: 1,
+        maxlength: 100,
       },
       questions: [{
+        text: String,
+        question_type: {
+          type: String,
+          enum: ["Multiple Choice", "True or False", "Text"],
+          required: true,
+        }
       }],
       number_of_questions: {
         type: Number,
         required: true,
-      }
-
+      },
     },
     {
       timestamps: {

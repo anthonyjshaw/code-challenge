@@ -19,4 +19,13 @@ const retrieveAllUserResponses = async () => {
   }
 };
 
-module.exports = { postNewUserResponse, retrieveAllUserResponses };
+const retrieveUserResponse = async (id) => {
+  try {
+    const userResponse = await UserResponse.findById(id);
+    return userResponse;
+  } catch (err) {
+    throw new Error(err);
+  }
+}
+
+module.exports = { postNewUserResponse, retrieveAllUserResponses, retrieveUserResponse};

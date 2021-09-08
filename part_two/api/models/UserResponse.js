@@ -5,13 +5,14 @@ const { Schema } = mongoose;
 const UserResponseSchema = new Schema(
     {
       form_id: {
-        type: Number,
+        type: String,
         required: true,
       },
-      number_of_questions: {
-        type: Number,
+      responses: {
+        type:
+        [String, Number, Boolean],
         required: true,
-      }
+      },
     },
     {
       timestamps: {

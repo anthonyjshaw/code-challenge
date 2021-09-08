@@ -19,4 +19,13 @@ const retrieveAllUserForms = async () => {
   }
 };
 
-module.exports = { postNewUserForm, retrieveAllUserForms };
+const retrieveUserForm = async (id) => {
+  try {
+    const userResponse = await UserForm.findById(id);
+    return userResponse;
+  } catch (err) {
+    throw new Error(err);
+  }
+}
+
+module.exports = { postNewUserForm, retrieveAllUserForms, retrieveUserForm };
